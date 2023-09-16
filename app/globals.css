@@ -3,25 +3,73 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* color */
+  --black: #000000;
+  --gray-90: #141414;
+  --gray-80: #1f1f1f;
+  --gray-70: #333333;
+  --gray-60: #545454;
+  --gray-50: #757575;
+  --gray-40: #afafaf;
+  --gray-30: #cbcbcb;
+  --gray-20: #e2e2e2;
+  --gray-10: #eeeeee;
+  --gray-5: #f6f6f6;
+  --white: #ffffff;
+
+  --blue-70: #0f2358;
+  --blue-60: #1a3c97;
+  --blue-50: #1f4cc0;
+  --blue-40: #4272ef;
+  --blue-30: #5ab8ff;
+  --blue-20: #a4bdfd;
+  --blue-10: #cad9ff;
+  --blue-5: #eaf0ff;
+
+  --magenta-ds: #f1337b;
+  --magenta: #ee5b95;
+  --peach-ds: #f68670;
+  --peach: #ef9f86;
+  --yellow-ds: #ffc416;
+  --yellow: #fecf44;
+  --tosca-ds: #01a9a0;
+  --tosca: #34bda7;
+
+  /* size */
+  --page-max-width: 1200px;
+  --navigation-height: 4rem;
+}
+html {
+  font-size: 62.5%;
+  @apply bg-background-primary text-text-primary;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  scrollbar-width: thin;
+}
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
 
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #858699;
+  border-radius: 14px;
+
+  height: 5px;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
