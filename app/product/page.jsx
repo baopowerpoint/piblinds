@@ -1,22 +1,37 @@
 import { HeroBeak } from "@/components/Breaker";
 import { Container } from "@/components/Container";
+import { Filter } from "@/components/Filter";
 import { PageWrapper } from "@/components/PageWrapper";
-import { BiArrowBack, BiSearch, BiSliderAlt, BiCartAdd } from "react-icons/bi";
+import { SearchBar } from "@/components/SearchBar";
+import { SortCategory } from "@/components/SortCategory";
+import { categories } from "@/constants/cagegories";
+import Link from "next/link";
+import { BiArrowBack, BiCartAdd } from "react-icons/bi";
 
 export default function Product() {
   return (
     <PageWrapper showSideBar={true}>
+      <Filter />
       <Container className="mt-5">
         <header className="flex items-center justify-start gap-5">
-          <button>
+          <Link href="/">
             <BiArrowBack className="text-2xl" />
-          </button>
+          </Link>
           <h5 className="text-lg font-semibold">Sản phẩm</h5>
         </header>
         <SearchBar />
         <HeroBeak />
-        <SortCategory />
+        <SortCategory categories={categories} />
         <HeroBeak />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />
@@ -27,50 +42,6 @@ export default function Product() {
     </PageWrapper>
   );
 }
-
-export const SearchBar = () => {
-  return (
-    <div className="relative mt-10">
-      {" "}
-      <input
-        type="text"
-        className="w-full rounded-lg bg-background-secondary p-3 pl-10"
-        placeholder="Tìm kiếm sản phẩm..."
-      />
-      <div className="absolute left-0 top-0 flex cursor-none select-none flex-col items-center p-3">
-        <button>
-          <BiSearch className="text-md text-text-secondary" />
-        </button>
-      </div>
-      <div className="absolute right-0 top-0 flex cursor-none select-none flex-col items-center p-3">
-        <button>
-          <BiSliderAlt className="text-md text-text-secondary" />
-        </button>
-      </div>
-    </div>
-  );
-};
-export const SortCategory = () => {
-  return (
-    <div className="flex gap-3 overflow-x-scroll py-5">
-      <div className="whitespace-nowrap rounded bg-indicator-success p-3 text-sm font-semibold text-background-primary">
-        Rèm cửa
-      </div>
-      <div className="whitespace-nowrap rounded bg-background-secondary p-3 text-sm">
-        Màn
-      </div>
-      <div className="whitespace-nowrap rounded bg-background-secondary p-3 text-sm">
-        Ga giường
-      </div>
-      <div className="whitespace-nowrap rounded bg-background-secondary p-3 text-sm">
-        Category 4
-      </div>
-      <div className="whitespace-nowrap rounded bg-background-secondary p-3 text-sm">
-        Category-5
-      </div>
-    </div>
-  );
-};
 
 export const ProductCard = () => {
   return (

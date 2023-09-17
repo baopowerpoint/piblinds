@@ -7,7 +7,7 @@ export const Header = () => {
     <Container className="z-100 fixed top-0 flex h-[var(--navigation-height)] items-center justify-between backdrop-blur-lg">
       <header className="flex w-full items-center justify-between">
         <Link className="text-md font-semibold" href="/">
-          Piblinds
+          Pidecor
         </Link>
         <TbMenu className="text-md" />
       </header>
