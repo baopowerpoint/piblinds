@@ -1,4 +1,4 @@
-import { HeroBeak } from "@/components/Breaker";
+import { HeroBreak } from "@/components/Breaker";
 import { Container } from "@/components/Container";
 import { Filter } from "@/components/Filter";
 import { PageWrapper } from "@/components/PageWrapper";
@@ -20,9 +20,9 @@ export default function Product() {
           <h5 className="text-lg font-semibold">Sản phẩm</h5>
         </header>
         <SearchBar />
-        <HeroBeak />
+        <HeroBreak />
         <SortCategory categories={categories} />
-        <HeroBeak />
+        <HeroBreak />
         <ProductCard />
         <ProductCard />
         <ProductCard />

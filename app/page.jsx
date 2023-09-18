@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { PageWrapper } from "@/components/PageWrapper";
-import { HeroBeak } from "@/components/Breaker";
+import { HeroBreak } from "@/components/Breaker";
 import { AnnouncementHero } from "@/components/sections/home/AnnouncementHero";
 import { SaleHero } from "@/components/sections/home/SaleHero";
 import { RecommendProduct } from "@/components/sections/home/RecommendProduct";
@@ -10,13 +10,13 @@ import { Devider } from "@/components/Devider";
 export default function Home() {
   return (
     <PageWrapper showFooter={true} showHeader={true} showSideBar={true}>
-      <Container className="pt-[var(--navigation-height)] text-md">
+      <Container className="pt-[calc(var(--navigation-height)+1rem)] text-md">
         <SaleHero />
-        <HeroBeak />
+        <HeroBreak />
         <AnnouncementHero />
-        <HeroBeak />
+        <HeroBreak />
         <RecommendProduct />
-        <HeroBeak />
+        <HeroBreak />
         <Devider />
         <PopularItem />
       </Container>

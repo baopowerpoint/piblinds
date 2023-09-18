@@ -9,7 +9,10 @@ export const SortCategory = ({ wrap, categories }) => {
       )}
     >
       {categories.map((category) => (
-        <div className="whitespace-nowrap rounded bg-indicator-success p-3 text-sm font-semibold text-background-primary">
+        <div
+          key={category.id}
+          className="whitespace-nowrap rounded bg-indicator-success p-3 text-sm font-semibold text-background-primary"
+        >
           {category.label}
         </div>
       ))}
